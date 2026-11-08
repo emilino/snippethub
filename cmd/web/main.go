@@ -7,6 +7,7 @@ import (
 
 func main() {
 	mux := http.NewServeMux()
+	mux.HandleFunc("/", home2)
 
 	log.Print("Starting server on :4000")
 	err := http.ListenAndServe(":4000", mux)
@@ -28,5 +29,5 @@ func main() {
 }
 
 func home2(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Hello"))
+	w.Write([]byte("Hello from Snippetbox"))
 }
