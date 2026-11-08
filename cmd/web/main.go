@@ -36,7 +36,7 @@ func home2(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	w.Write([]byte("Hello from Snippetbox"))
+	w.Write([]byte("Hello from Snippetbox!"))
 }
 
 func snippetView2(w http.ResponseWriter, r *http.Request) {
