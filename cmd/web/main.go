@@ -40,6 +40,7 @@ func home2(w http.ResponseWriter, r *http.Request) {
 }
 
 func snippetView2(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Cache-Control", "public, max-age=31536000")
 	w.Write([]byte("Display a specific snippet..."))
 }
 
